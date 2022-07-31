@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>  <!-- SWEET ALERT -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="https://kit.fontawesome.com/3b80f70e98.js" crossorigin="anonymous"></script> <!-- KIT DE LOGOS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> <!-- BOOTSTRAP -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"><!-- TOASTIFY -->
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="stock.js"></script>
+    <script defer src="modal.js"></script>
+    <script defer src="app.js"></script>
+    <link
+      rel="shortcut icon"
+      href="./images/logo.png"
+      sizes="32x32"
+      type="image/x-icon"
+    />
+    <title>Cyber Dragon</title>
+</head>
+<body class="hidden">
+  <div class="centro" id="onload"><span class="loader"></span></div>
+    <header class="oculto">
+   
+        <img src="./images/logocontexto.png" alt="" />
+  
+        <nav class="nav">
+          <div class="nav_container">
+            <div class="nav_menu">
+              <a href="#" class="nav_item">+ Productos</a>
+              <a href="#" class="nav_item">PC</a>
+              <a href="#" class="nav_item">Consolas</a>
+              <a href="#" class="nav_item">Notebooks</a>
+
+                
+              <input type="text" class="nav_item_2" id="buscador" style="color:black" placeholder="Ingrese el Producto" >
+
+              <button class="nav_item_2" id="boton-carrito"><i class="fa-solid fa-cart-shopping"></i><span id="contadorCarrito">0</span></button>
+            </div>
+          </div>
+        </nav>
+    </header>
+      <section class="oculto " id="spam">
+        <div>
+          <h2>Bienvenidos a <strong class="resaltar">CyberDragon</strong></h2>
+          <h3>Una nueva experiencia en tiendas Gaming</h3>
+        </div>
+        <img
+          src="./images/publicidad1.jpg"
+          alt="yaconseguireunaimagendecalidad"
+        />
+      </section>
+
+    <main id="contenedor-productos">
+      
+    </main>
+
+
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+         
+           
+            <div id="carrito-contenedor">
+              
+            </div>
+           
+            <p class="precioProducto boton_add">Precio total: $<span id="precioTotal">0</span></p>
+            <button id="vaciar-carrito" class="boton-agregar boton_add" >Vaciar carrito</button>
+            <button id="cerrar" class="close"> <span>X</span> </button>
+        </div>
+    </div>
+
+    <div class="modal-contenedor">
+
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <footer>
+    <div class="informacion">
+
+        <div class="container">
+            <div id="footer-info" class="row pb-4">
+                <div class="col-4 col-md-3 pt-5">
+                    <h2 class="title">ACERCA DE</h2>
+                    <a href="#">
+                        <h3 class="gray-white">Información</h3>
+                    </a>
+                    <a href="#">
+                        <h3 class="gray-white">Preguntas frecuentes</h3>
+                    </a>
+                    <a href="#">
+                        <h3 class="gray-white">Contacto</h3>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-3 pt-5">
+                    <h2 class="title">SECCIONES</h2>
+                    
+                    <a href="#" onclick="showLoginModal()">
+                        <h3 class="gray-white">Favoritos</h3>
+                    </a>
+                    
+                    <a href="#">
+                        <h3 class="gray-white">Ofertas</h3>
+                    </a>
+                </div>
+
+                <div class="col-4 col-md-3 pt-5">
+                    <h2 class="title">SEGUINOS</h2>
+                    <div class="social">
+                        <a href="https://www.facebook.com/#" target="_blank">
+                            <i id="facebook" class="fab fa-facebook-f gray-white pr-2"></i>
+                            <span class="gray-white">Facebook</span>
+                        </a>
+                        <a href="https://www.instagram.com/#" target="_blank">
+                            <i id="instagram" class="fab fa-instagram gray-white pr-1"></i>
+                            <span class="gray-white">Instagram</span>
+                        </a>
+                        <a href="https://twitter.com/#" target="_blank">
+                            <i id="twitter" class="fab fa-twitter gray-white pr-1"></i>
+                            <span class="gray-white">Twitter</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-4 col-md-3 pt-5">
+                    <h2 class="title">COLABORAN</h2>
+                    <a href="#" target="_blank">
+                        <h3 class="gray-white">-------</h3>
+                    </a>
+                    <a href="#" target="_blank">
+                        <h3 class="gray-white">-------</h3>
+                    </a>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center pt-2">
+                <h3 class="gray-3">Copyright ©
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    - CyberDragon - Todos los derechos reservados</h3>
+            </div>
+        </div>
+    </div>
+    <div class="pie">
+        <div class="container">
+            <div class="row" style="justify-content: center;">
+                <a href="#" class="mr-4">
+                    <h3>Términos y condiciones</h3>
+                </a>
+                <a href="#" class="ml-4">
+                    <h3>Política de privacidad</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
